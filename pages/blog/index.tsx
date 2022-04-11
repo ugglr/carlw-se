@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 
-const Home: NextPage = () => {
+const Blog: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <p>Hello 👋 I&apos;m Carl</p>
-        <h1 className={styles.title}>I write instant legacy code.</h1>
+        <h1 className={styles.title}>Blog.</h1>
       </main>
 
       <footer className={styles.footer}></footer>
@@ -22,4 +22,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Blog;
