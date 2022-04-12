@@ -13,11 +13,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <p>Hello 👋 I&apos;m Carl</p>
-        <h1 className={styles.title}>I write instant legacy code.</h1>
+        <h2>Hello I&apos;m Carl 👋</h2>
+        <h1 className={styles.heroTitle}>They call me a</h1>
+        <h1 className={styles.heroTitle}>Fullstack Engineer.</h1>
+        <h2>Typescript | React | React Native | Node.js and all that.</h2>
+        <p className={styles.locationText}>Currently in: Asia 📍 </p>
+        <h1>👇</h1>
       </main>
-
-      <footer className={styles.footer}></footer>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import styles from "../../styles/Home.module.css";
 
-const Blog: NextPage = () => {
+const Projects: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,10 +14,10 @@ const Blog: NextPage = () => {
 
       <main className={styles.main}>
         <p>Hello 👋 I&apos;m Carl</p>
-        <h1 className={styles.title}>Blog.</h1>
+        <h1 className={styles.title}>Projects.</h1>
       </main>
     </div>
   );
 };
 
-export default Blog;
+export default Projects;
