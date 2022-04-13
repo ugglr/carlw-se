@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
 // Site wide applied layout
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

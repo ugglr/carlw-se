@@ -10,7 +10,7 @@ type LayoutProps = {
 function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.layout}>
-      <div>
+      <div className={styles.content}>
         <Navbar />
         {children}
       </div>

@@ -1,16 +1,16 @@
-.main {
-  min-height: 100vh;
-  flex: 1;
+.hero {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 90vh;
+  padding-top: 5rem;
+  max-width: 90vw;
 }
 
 .heroTitle {
   margin: 0;
   line-height: 1.15;
-  font-size: 11rem;
+  font-size: 10rem;
 }
 
 .heroTitle {
