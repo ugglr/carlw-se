@@ -5,7 +5,7 @@ type HeroProps = {
   megaLine1: string;
   megaLine2: string;
   description: string;
-  subtitle: string;
+  subtitle?: string;
   miniBottom: string;
 };
 
@@ -22,7 +22,7 @@ const HomeHero = ({
     <h1 className={styles.heroTitle}>{megaLine1}</h1>
     <h1 className={styles.heroTitle}>{megaLine2}</h1>
     <h2>{description}</h2>
-    <p className={styles.locationText}>{subtitle}</p>
+    {subtitle && <p className={styles.locationText}>{subtitle}</p>}
     <h1>{miniBottom}</h1>
   </div>
 );

@@ -1,10 +1,19 @@
+@import "../styles/colors";
+
 .projectCard {
   display: flex;
-  border: solid 5px black;
+  flex-direction: column;
+  border: solid 5px $offBlack;
   border-radius: 20px;
   padding: 1rem;
-  width: 80vw;
+  max-width: 55rem;
   justify-content: space-between;
+}
+
+.topContainer {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1.5rem;
 }
 
 .title {
@@ -16,4 +25,19 @@
   display: flex;
   margin-top: 1rem;
   flex-wrap: wrap;
+  max-width: 40rem;
+}
+
+.descriptionContainer {
+  max-width: 32rem;
+  margin-top: 3rem;
+  font-size: 2rem;
+}
+
+.imageContainer {
+  background-color: black;
+  border-radius: 20px;
+  padding: 0.3rem;
+  width: 162px;
+  height: 350px;
 }
