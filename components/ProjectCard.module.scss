@@ -3,7 +3,6 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  border: solid 5px $offBlack;
   border-radius: 20px;
   padding: 1rem;
   max-width: 55rem;
@@ -37,7 +36,12 @@
 .imageContainer {
   background-color: black;
   border-radius: 20px;
-  padding: 0.3rem;
-  width: 162px;
+  padding: 5px;
+  width: 167px;
+  min-width: 167px;
   height: 350px;
+}
+
+.buttonWrapper {
+  margin-top: 0.5rem;
 }

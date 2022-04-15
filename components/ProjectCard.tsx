@@ -1,6 +1,5 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import Accordion, { AccordionProps } from "./Accordion";
 import Button from "./Button";
 import styles from "./ProjectCard.module.scss";
 import Tag from "./Tag";
@@ -9,7 +8,7 @@ type ProjectCardProps = {
   title: string;
   tags: string[];
   description?: string;
-  thumbnailSrc: string;
+  thumbnailSrc: StaticImageData;
   websiteUrl: string;
   internalUrl: string;
 };
@@ -35,12 +34,7 @@ const ProjectCard = ({
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <Image
-            alt={thumbnailSrc}
-            src={thumbnailSrc}
-            height={350}
-            width={162}
-          />
+          <Image alt={title} src={thumbnailSrc} />
         </div>
       </div>
 
@@ -50,9 +44,13 @@ const ProjectCard = ({
         </a>
       )}
       {internalUrl && (
-        <Link href={internalUrl} passHref>
-          <Button title="See more" />
-        </Link>
+        <div className={styles.buttonWrapper}>
+          <Link href={internalUrl} passHref>
+            <a>
+              <Button title="See more" variant="primary" />
+            </a>
+          </Link>
+        </div>
       )}
     </div>
   );

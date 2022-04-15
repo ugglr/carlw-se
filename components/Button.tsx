@@ -2,13 +2,19 @@ import styles from "./Button.module.scss";
 
 type ButtonProps = {
   title: string;
+  variant?: "primary" | "secondary";
   onClick?: () => any;
 };
 
-const Button = ({ title, onClick }: ButtonProps) => (
-  <div className={styles.button} onClick={onClick}>
+const Button = ({ title, onClick, variant }: ButtonProps) => (
+  <button
+    className={[styles.button, variant === "primary" && styles.primary].join(
+      " "
+    )}
+    onClick={onClick}
+  >
     <p>{title}</p>
-  </div>
+  </button>
 );
 
 export default Button;

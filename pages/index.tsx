@@ -5,6 +5,8 @@ import ProjectCard from "../components/ProjectCard";
 import MegaHero from "../components/MegaHero";
 import { homeHeroContent } from "../content/home-page";
 
+import norbanSplashScreen from "../public/images/norban-app/splash-screen.png";
+
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
@@ -46,7 +48,7 @@ const Home: NextPage = () => {
               ],
               description:
                 "Real estate startup. I work on all parts of the stack, web, app, backend and other services.",
-              thumbnailSrc: "/images/norban-app/splash-screen.png",
+              thumbnailSrc: norbanSplashScreen,
               websiteUrl: "https://norban.se",
               internalUrl: "/norban",
             }}
@@ -70,7 +72,7 @@ const Home: NextPage = () => {
               ],
               description:
                 "Soon launching on the App Store. Coffee logging app for weird coffee people.",
-              thumbnailSrc: "/images/norban-app/splash-screen.png",
+              thumbnailSrc: norbanSplashScreen,
               websiteUrl: "https://brewtime.app",
               internalUrl: "/brewtime",
             }}
