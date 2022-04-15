@@ -1,0 +1,43 @@
+.projectHero {
+  align-items: center;
+  display: flex;
+  min-height: 90vh;
+  min-width: 80vw;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+.leftContainer {
+  margin-right: 4rem;
+}
+
+.title {
+  font-size: 9rem;
+  margin: 0;
+}
+.description {
+  font-size: 2rem;
+  max-width: 40rem;
+  margin-bottom: 4rem;
+}
+
+.imageRow {
+  display: flex;
+  justify-content: space-between;
+  min-width: 600px;
+}
+
+.appImageContainer {
+  background-color: black;
+  border-radius: 20px;
+  padding: 5px;
+  width: 189px;
+  min-width: 167px;
+  height: 400px;
+}
+
+.badgeContainer {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 4rem;
+}

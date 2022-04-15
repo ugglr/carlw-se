@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import ProjectHero from "../../../components/ProjectHero";
+import brewtimeContent from "../../../content/brewtime.content";
 
 const Brewtime: NextPage = () => {
   return (
@@ -11,7 +13,12 @@ const Brewtime: NextPage = () => {
       </Head>
 
       <main>
-        <h1>Brewtime.</h1>
+        <ProjectHero
+          {...{
+            title: brewtimeContent.organisationName,
+            images: brewtimeContent.app.images,
+          }}
+        />
       </main>
     </div>
   );

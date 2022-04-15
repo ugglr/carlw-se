@@ -23,7 +23,7 @@ const ProjectCard = ({
   return (
     <div className={styles.projectCard}>
       <div className={styles.topContainer}>
-        <div>
+        <div className={styles.topLeftContainer}>
           <h3 className={styles.title}>{title}</h3>
           <div className={styles.tagContainer}>
             {tags?.length > 0 &&

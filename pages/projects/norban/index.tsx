@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import ProjectHero from "../../../components/ProjectHero";
+import norbanContent from "../../../content/norban.content";
 
 const Norban: NextPage = () => {
   return (
@@ -11,7 +13,16 @@ const Norban: NextPage = () => {
       </Head>
 
       <main>
-        <h1>Norban.</h1>
+        <ProjectHero
+          {...{
+            title: norbanContent.organisationName,
+            description: norbanContent.longDescription,
+            images: norbanContent.app.images,
+            websiteUrl: norbanContent.websiteUrl,
+            appstoreUrl: norbanContent.appstoreUrl,
+            playstoreUrl: norbanContent.playstoreUrl,
+          }}
+        />
       </main>
     </div>
   );

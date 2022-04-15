@@ -2,7 +2,7 @@ import styles from "./Button.module.scss";
 
 type ButtonProps = {
   title: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "outlined";
   onClick?: () => any;
 };
 

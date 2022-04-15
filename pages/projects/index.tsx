@@ -1,5 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import ProjectCard from "../../components/ProjectCard";
+import brewtimeContent from "../../content/brewtime.content";
+import norbanContent from "../../content/norban.content";
 
 import styles from "../../styles/Home.module.scss";
 
@@ -13,8 +16,26 @@ const Projects: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <p>Hello 👋 I&apos;m Carl</p>
-        <h1 className={styles.title}>Projects.</h1>
+        <ProjectCard
+          {...{
+            title: norbanContent.organisationName,
+            tags: norbanContent.tags,
+            description: norbanContent.shortDescription,
+            thumbnailSrc: norbanContent.app.splashScreen,
+            websiteUrl: norbanContent.websiteUrl,
+            internalUrl: "/projects/norban",
+          }}
+        />
+        <ProjectCard
+          {...{
+            title: brewtimeContent.organisationName,
+            tags: brewtimeContent.tags,
+            description: brewtimeContent.shortDescription,
+            thumbnailSrc: brewtimeContent.app.splashScreen,
+            websiteUrl: brewtimeContent.websiteUrl,
+            internalUrl: "/projects/brewtime",
+          }}
+        />
       </main>
     </div>
   );

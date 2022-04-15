@@ -11,13 +11,13 @@
   width: 100%;
 
   &:hover {
-    color: white;
-    background-color: $purple;
+    color: black;
+    background-color: $yellow;
     cursor: pointer;
   }
 }
 
 .primary {
-  background-color: black;
+  background-color: $purple;
   color: white;
 }
