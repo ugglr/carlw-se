@@ -37,7 +37,11 @@
 
 .badgeContainer {
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   display: flex;
   margin-top: 4rem;
+}
+
+.leftBadgeWrapper {
+  margin-right: 2rem;
 }

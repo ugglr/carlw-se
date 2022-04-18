@@ -34,7 +34,12 @@ const ProjectHero = ({
       </a>
       <div className={styles.badgeContainer}>
         {appstoreUrl && (
-          <a href={appstoreUrl} target="_blank" rel="noreferrer">
+          <a
+            href={appstoreUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.leftBadgeWrapper}
+          >
             <Image
               alt="app store badge"
               src={appstoreBadge}
