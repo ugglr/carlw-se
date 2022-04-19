@@ -1,14 +1,18 @@
 @import "../styles/colors";
 
 .tag {
+  align-items: center;
+  display: flex;
+  background-color: $purple;
   border: 1px solid black;
   border-radius: 20px;
-  padding: 0 12px;
+  color: white;
+  padding: 4px 12px;
   margin-right: 0.5rem;
   margin-top: 0.5rem;
 
   &:hover {
-    background-color: $purple;
-    color: white;
+    background-color: $yellow;
+    color: black;
   }
 }
