@@ -30,6 +30,8 @@ const Home: NextPage = () => {
             description: homeHeroContent.description,
             subtitle: homeHeroContent.location,
             miniBottom: homeHeroContent.bottom,
+            ctaButtonLabel: homeHeroContent.ctaButtonLabel,
+            ctaButtonLink: homeHeroContent.ctaButtonLink,
           }}
         />
 

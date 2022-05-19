@@ -4,7 +4,7 @@ import ProjectCard from "../../components/ProjectCard";
 import brewtimeContent from "../../content/brewtime.content";
 import norbanContent from "../../content/norban.content";
 
-import styles from "../../styles/Home.module.scss";
+import styles from "../../styles/Projects.module.scss";
 
 const Projects: NextPage = () => {
   return (
@@ -16,16 +16,21 @@ const Projects: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <ProjectCard
-          {...{
-            title: norbanContent.organisationName,
-            tags: norbanContent.tags,
-            description: norbanContent.shortDescription,
-            thumbnailSrc: norbanContent.app.splashScreen,
-            websiteUrl: norbanContent.websiteUrl,
-            internalUrl: "/projects/norban",
-          }}
-        />
+        <div className={styles.topMargin} />
+
+        <div className={styles.projectContainer}>
+          <ProjectCard
+            {...{
+              title: norbanContent.organisationName,
+              tags: norbanContent.tags,
+              description: norbanContent.shortDescription,
+              thumbnailSrc: norbanContent.app.splashScreen,
+              websiteUrl: norbanContent.websiteUrl,
+              internalUrl: "/projects/norban",
+            }}
+          />
+        </div>
+
         <ProjectCard
           {...{
             title: brewtimeContent.organisationName,
@@ -36,6 +41,8 @@ const Projects: NextPage = () => {
             internalUrl: "/projects/brewtime",
           }}
         />
+
+        <div className={styles.footerMargin} />
       </main>
     </div>
   );

@@ -30,7 +30,7 @@ const ProjectCard = ({
               tags.map((tag) => <Tag key={tag} {...{ tag }} />)}
           </div>
           <div className={styles.descriptionContainer}>
-            {description && <p>{description}</p>}
+            {description && <p className={styles.description}>{description}</p>}
           </div>
         </div>
         <div className={styles.imageContainer}>

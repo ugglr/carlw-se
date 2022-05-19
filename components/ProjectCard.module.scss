@@ -3,7 +3,6 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
   padding: 1rem;
   max-width: 55rem;
   justify-content: space-between;
@@ -48,4 +47,40 @@
 
 .buttonWrapper {
   margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 780px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+
+  .imageContainer {
+    width: 117px; // 116.9px
+    min-width: 117px;
+    height: 245px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .description {
+    font-size: 1.1rem;
+  }
+  .imageContainer {
+    width: 105.21px; // 116.9px
+    min-width: 105.21px;
+    height: 220.5px;
+  }
 }

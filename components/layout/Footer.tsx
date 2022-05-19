@@ -1,13 +1,12 @@
 import { ReactElement } from "react";
+import Button from "../Button";
 
 import styles from "./Footer.module.scss";
 
 function Footer(): ReactElement {
   return (
     <footer className={styles.footer}>
-      <div>
-        <h2>carlw.se - Carefully crafted instant legacy code.</h2>
-      </div>
+      <h2>carlw.se - Fullstack Engineer.</h2>
     </footer>
   );
 }

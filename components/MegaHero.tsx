@@ -1,3 +1,4 @@
+import Button from "./Button";
 import styles from "./MegaHero.module.scss";
 
 type HeroProps = {
@@ -16,13 +17,20 @@ const HomeHero = ({
   description,
   subtitle,
   miniBottom,
+  ctaButtonLabel,
+  ctaButtonLink,
 }: HeroProps) => (
   <div className={styles.hero}>
-    <h2>{miniTitle}</h2>
+    <h2 className={styles.miniTitle}>{miniTitle}</h2>
     <h1 className={styles.heroTitle}>{megaLine1}</h1>
     <h1 className={styles.heroTitle}>{megaLine2}</h1>
-    <h2>{description}</h2>
-    {subtitle && <p className={styles.locationText}>{subtitle}</p>}
+    <h2 className={styles.heroSubtitle}>{description}</h2>
+    {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+    <div className={styles.buttonContainer}>
+      <a href={ctaButtonLink}>
+        <Button {...{ title: ctaButtonLabel, variant: "primary" }} />
+      </a>
+    </div>
     <h1>{miniBottom}</h1>
   </div>
 );

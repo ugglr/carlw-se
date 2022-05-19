@@ -13,7 +13,6 @@ const norbanContent = {
   longDescription:
     "Startup trying to distrupt the real estate market in Sweden by offering a better realtor service with transparent and easy pricing.",
   tags: [
-    "Fullstack",
     "TypeScript",
     "React",
     "React Native",
@@ -22,6 +21,7 @@ const norbanContent = {
     "GraphQL",
     "Postgresql",
     "MongoDB",
+    "GCP",
   ],
   app: {
     splashScreen,

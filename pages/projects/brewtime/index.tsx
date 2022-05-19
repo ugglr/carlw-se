@@ -16,7 +16,10 @@ const Brewtime: NextPage = () => {
         <ProjectHero
           {...{
             title: brewtimeContent.organisationName,
+            description: brewtimeContent.longDescription,
             images: brewtimeContent.app.images,
+            websiteUrl: brewtimeContent.websiteUrl,
+            appstoreUrl: brewtimeContent.appstoreUrl,
           }}
         />
       </main>

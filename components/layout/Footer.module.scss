@@ -1,8 +1,22 @@
 .footer {
-    background-color: black;
-    color: white;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 0 2rem;
-    width: 80vw;
+  align-items: center;
+  display: flex;
+  background-color: black;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 0 2rem;
+  width: 80vw;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 780px) {
+  .footer {
+    padding: 1rem 2rem;
+    width: 100vw;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
 }
