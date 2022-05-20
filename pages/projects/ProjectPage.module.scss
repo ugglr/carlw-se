@@ -1,0 +1,39 @@
+.heroMargin {
+  height: 4rem;
+}
+
+.infoContainer {
+  font-size: 1.5rem;
+  width: 60vw;
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    li {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.footerMargin {
+  height: 5rem;
+}
+
+@media only screen and (max-width: 960px) {
+  .infoContainer {
+    font-size: 1.3rem;
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .infoContainer {
+    font-size: 1.2rem;
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+}

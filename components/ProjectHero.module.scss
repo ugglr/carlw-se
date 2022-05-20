@@ -2,9 +2,9 @@
   align-items: center;
   display: flex;
   min-height: 90vh;
-  min-width: 80vw;
+  width: 80vw;
   justify-content: space-between;
-  flex-wrap: wrap-reverse;
+  max-width: 1600px;
 }
 .leftContainer {
   margin-right: 4rem;
@@ -23,25 +23,79 @@
 .imageRow {
   display: flex;
   justify-content: space-between;
-  min-width: 600px;
+
+  :nth-child(2) {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
 }
 
 .appImageContainer {
   background-color: black;
   border-radius: 20px;
   padding: 5px;
-  width: 189px;
-  min-width: 167px;
-  height: 400px;
+  width: 151.2px;
+  min-width: 133.6px;
+  height: 320px;
 }
 
 .badgeContainer {
   align-items: center;
-  // justify-content: space-between;
   display: flex;
   margin-top: 4rem;
 }
 
 .leftBadgeWrapper {
   margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1300px) {
+  .title {
+    font-size: 6rem;
+  }
+  .description {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .appImageContainer {
+    width: 120.96px;
+    min-width: 106.88px;
+    height: 256px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .projectHero {
+    flex-wrap: wrap-reverse;
+    margin-top: 5rem;
+  }
+  .imageRow {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .title {
+    font-size: 5rem;
+  }
+  .description {
+    font-size: 1.4rem;
+  }
+
+  .imageRow {
+    :nth-child(2) {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .appImageContainer {
+    width: 96.768px;
+    min-width: 85.504px;
+    height: 204.8px;
+  }
 }
