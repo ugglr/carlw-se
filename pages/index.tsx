@@ -4,13 +4,33 @@ import { SectionHeader } from "../components/layout";
 import ProjectCard from "../components/ProjectCard";
 import MegaHero from "../components/MegaHero";
 import { homeHeroContent } from "../content/home.content";
-
-import norbanSplashScreen from "../public/images/norban-app/splash-screen.png";
-import brewtimeSplashScreen from "../public/images/brewtime-app/splash-screen.png";
+import Lottie from "react-lottie";
 
 import styles from "../styles/Home.module.scss";
+
 import norbanContent from "../content/norban.content";
 import brewtimeContent from "../content/brewtime.content";
+
+import scrollingPurpleClouds from "../public/lotties/scrolling-purple-clouds.json";
+import purpleCloud from "../public/lotties/purple-cloud.json";
+
+const purpleCloudOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: purpleCloud,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
+const scrollingPurpleCloudOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: scrollingPurpleClouds,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +41,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main style={{ overflow: "hidden" }}>
+      <main style={{ overflow: "hidden", flexGrow: 0 }}>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 0 }}>
+          <Lottie {...{ options: scrollingPurpleCloudOptions }} />
+        </div>
         <MegaHero
           {...{
             miniTitle: homeHeroContent.greeting,
@@ -34,6 +57,37 @@ const Home: NextPage = () => {
             ctaButtonLink: homeHeroContent.ctaButtonLink,
           }}
         />
+
+        <div
+          style={{
+            position: "absolute",
+            left: -200,
+            bottom: -100,
+          }}
+        >
+          <Lottie {...{ options: purpleCloudOptions }} />
+        </div>
+
+        <div
+          style={{
+            position: "absolute",
+            bottom: -400,
+            right: 400,
+          }}
+        >
+          <Lottie {...{ options: purpleCloudOptions }} />
+        </div>
+
+        <div
+          style={{
+            position: "absolute",
+            height: "50%",
+            right: 0,
+            flexGrow: 0,
+          }}
+        >
+          <Lottie {...{ options: purpleCloudOptions }} />
+        </div>
 
         <section>
           <SectionHeader {...{ title: "work." }} />

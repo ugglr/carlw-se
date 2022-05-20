@@ -1,4 +1,5 @@
 import Button from "./Button";
+
 import styles from "./MegaHero.module.scss";
 
 type HeroProps = {
