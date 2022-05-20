@@ -1,4 +1,44 @@
+.heroMargin {
+  height: 4rem;
+}
+.topLottieContainer {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  opacity: 80%;
+}
+
+.middleLottieContainer {
+  position: absolute;
+  transform: translateY(-350px);
+  right: 0px;
+}
+
 .subSection {
-  margin-top: 5rem;
-  margin-bottom: 10rem;
+  align-self: center;
+  width: 80vw;
+  margin: auto;
+  z-index: 1;
+}
+.sectionMargin {
+  height: 5rem;
+}
+
+.footerMargin {
+  height: 7rem;
+}
+
+@media only screen and (max-width: 590px) {
+  .subSection {
+    width: 100vw;
+  }
+  .topLottieContainer {
+    top: -30px;
+    left: -260px;
+    height: 20rem;
+  }
+  .middleLottieContainer {
+    transform: translateY(-170px);
+    height: 15rem;
+  }
 }

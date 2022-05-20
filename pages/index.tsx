@@ -11,22 +11,12 @@ import styles from "../styles/Home.module.scss";
 import norbanContent from "../content/norban.content";
 import brewtimeContent from "../content/brewtime.content";
 
-import scrollingPurpleClouds from "../public/lotties/scrolling-purple-clouds.json";
 import purpleCloud from "../public/lotties/purple-cloud.json";
 
 const purpleCloudOptions = {
   loop: true,
   autoplay: true,
   animationData: purpleCloud,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
-
-const scrollingPurpleCloudOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: scrollingPurpleClouds,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
   },
@@ -41,10 +31,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main style={{ overflow: "hidden", flexGrow: 0 }}>
-        <div style={{ position: "absolute", left: 0, right: 0, top: 0 }}>
-          <Lottie {...{ options: scrollingPurpleCloudOptions }} />
-        </div>
+      <main style={{ overflow: "hidden" }}>
         <MegaHero
           {...{
             miniTitle: homeHeroContent.greeting,
@@ -58,38 +45,17 @@ const Home: NextPage = () => {
           }}
         />
 
-        <div
-          style={{
-            position: "absolute",
-            left: -200,
-            bottom: -100,
-          }}
-        >
+        <div className={styles.heroMargin} />
+
+        <div className={styles.topLottieContainer}>
           <Lottie {...{ options: purpleCloudOptions }} />
         </div>
 
-        <div
-          style={{
-            position: "absolute",
-            bottom: -400,
-            right: 400,
-          }}
-        >
+        <div className={styles.middleLottieContainer}>
           <Lottie {...{ options: purpleCloudOptions }} />
         </div>
 
-        <div
-          style={{
-            position: "absolute",
-            height: "50%",
-            right: 0,
-            flexGrow: 0,
-          }}
-        >
-          <Lottie {...{ options: purpleCloudOptions }} />
-        </div>
-
-        <section>
+        <section className={styles.subSection}>
           <SectionHeader {...{ title: "work." }} />
           <ProjectCard
             {...{
@@ -102,6 +68,8 @@ const Home: NextPage = () => {
             }}
           />
         </section>
+
+        <div className={styles.sectionMargin} />
 
         <section className={styles.subSection}>
           <SectionHeader {...{ title: "side project." }} />
@@ -116,6 +84,8 @@ const Home: NextPage = () => {
             }}
           />
         </section>
+
+        <div className={styles.footerMargin} />
       </main>
     </div>
   );

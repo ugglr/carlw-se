@@ -1,6 +1,17 @@
+import Lottie from "react-lottie";
 import Button from "./Button";
 
 import styles from "./MegaHero.module.scss";
+import scrollingPurpleClouds from "../public/lotties/scrolling-purple-clouds.json";
+
+const scrollingPurpleCloudOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: scrollingPurpleClouds,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
 type HeroProps = {
   miniTitle: string;
@@ -22,17 +33,23 @@ const HomeHero = ({
   ctaButtonLink,
 }: HeroProps) => (
   <div className={styles.hero}>
-    <h2 className={styles.miniTitle}>{miniTitle}</h2>
-    <h1 className={styles.heroTitle}>{megaLine1}</h1>
-    <h1 className={styles.heroTitle}>{megaLine2}</h1>
-    <h2 className={styles.heroSubtitle}>{description}</h2>
-    {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
-    <div className={styles.buttonContainer}>
-      <a href={ctaButtonLink}>
-        <Button {...{ title: ctaButtonLabel, variant: "primary" }} />
-      </a>
+    <div className={styles.heroContent}>
+      <h2 className={styles.miniTitle}>{miniTitle}</h2>
+      <h1 className={styles.heroTitle}>{megaLine1}</h1>
+      <h1 className={styles.heroTitle}>{megaLine2}</h1>
+      <h2 className={styles.heroSubtitle}>{description}</h2>
+      {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+      <div className={styles.buttonContainer}>
+        <a href={ctaButtonLink}>
+          <Button {...{ title: ctaButtonLabel, variant: "primary" }} />
+        </a>
+      </div>
+      <h1>{miniBottom}</h1>
     </div>
-    <h1>{miniBottom}</h1>
+
+    <div className={styles.lottieContainer}>
+      <Lottie {...{ options: scrollingPurpleCloudOptions }} />
+    </div>
   </div>
 );
 
