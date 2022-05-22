@@ -1,6 +1,6 @@
 import Lottie from "react-lottie";
 import Button from "./Button";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 import styles from "./MegaHero.module.scss";
 import scrollingPurpleClouds from "../public/lotties/scrolling-purple-clouds.json";
@@ -14,6 +14,22 @@ const scrollingPurpleCloudOptions = {
   },
 };
 
+const containerAnimationVariant: Variants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+const topTextAnimationVariant: Variants = {
+  visible: { y: 0, transition: { duration: 1 } },
+  hidden: { y: -200 },
+};
+const textAnimationVariant: Variants = {
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  hidden: { opacity: 0, x: -100 },
+};
+
 type HeroProps = {
   miniTitle: string;
   megaLine1: string;
@@ -21,21 +37,8 @@ type HeroProps = {
   description: string;
   subtitle?: string;
   miniBottom: string;
-};
-const containerAnimationVariant = {
-  visible: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-const topTextAnimationVariant = {
-  visible: { y: 0, transition: { duration: 1 } },
-  hidden: { y: -200 },
-};
-const textAnimationVariant = {
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-  hidden: { opacity: 0, x: -100 },
+  ctaButtonLabel: string;
+  ctaButtonLink: string;
 };
 
 const HomeHero = ({
