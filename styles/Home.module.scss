@@ -14,14 +14,24 @@
   right: 0px;
 }
 
+.bottomLottieContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 7rem;
+}
+
+.bottomLottiePositionerContainer {
+  height: 300px;
+  width: 500px;
+  position: absolute;
+}
+
 .subSection {
   align-self: center;
   width: 80vw;
   margin: auto;
-  z-index: 1;
-}
-.sectionMargin {
-  height: 5rem;
+  z-index: 2;
 }
 
 .footerMargin {
@@ -40,5 +50,9 @@
   .middleLottieContainer {
     transform: translateY(-170px);
     height: 15rem;
+  }
+  .bottomLottiePositionerContainer {
+    height: 200px;
+    width: 250px;
   }
 }
