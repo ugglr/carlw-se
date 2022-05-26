@@ -35,7 +35,7 @@ const rockingPurpleCloudOptions = {
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <motion.div className={styles.container}>
       <Head>
         <title>carlw.se - Fullstack engineer</title>
         <meta name="description" content="" />
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
 
         <div className={styles.footerMargin} />
       </main>
-    </div>
+    </motion.div>
   );
 };
 

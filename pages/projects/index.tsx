@@ -8,14 +8,14 @@ import styles from "../../styles/Projects.module.scss";
 
 const Projects: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>carlw.se - Fullstack engineer</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main>
         <div className={styles.topMargin} />
 
         <div className={styles.projectContainer}>

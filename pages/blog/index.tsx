@@ -1,5 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Hero from "../../components/Hero";
+
+import styles from "../../styles/Blog.module.scss";
 
 const Blog: NextPage = () => {
   return (
@@ -11,7 +14,7 @@ const Blog: NextPage = () => {
       </Head>
 
       <main>
-        <h1>Blog.</h1>
+        <Hero {...{ title: "blog." }} />
       </main>
     </div>
   );

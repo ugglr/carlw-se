@@ -68,7 +68,7 @@ const ProjectCard = ({
       )}
       {internalUrl && (
         <div className={styles.buttonWrapper}>
-          <Link href={internalUrl} passHref>
+          <Link href={internalUrl} passHref scroll={false}>
             <a>
               <Button title="See more" variant="primary" />
             </a>
