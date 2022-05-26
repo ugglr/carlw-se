@@ -8,19 +8,27 @@
   z-index: 10;
 }
 
-.logo,
-.link {
-  font-size: 1.5rem;
-
-  &:hover {
-    font-size: 1.6rem;
-  }
-}
-
 .logo {
   font-weight: bold;
 
   &:hover {
     text-decoration: underline 10px;
   }
+}
+
+.logo,
+.link {
+  font-size: 1.7rem;
+
+  &:hover {
+    text-decoration: underline 10px;
+  }
+}
+
+.linksContainer {
+  display: flex;
+}
+
+.linkMargin {
+  width: 2rem;
 }
