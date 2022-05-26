@@ -3,6 +3,20 @@ import Link from "next/link";
 import Button from "./Button";
 import styles from "./ProjectCard.module.scss";
 import Tag from "./Tag";
+import { motion, Variants } from "framer-motion";
+
+const tagContainerVariant: Variants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const tagVariant: Variants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: -100 },
+};
 
 type ProjectCardProps = {
   title: string;
@@ -25,10 +39,19 @@ const ProjectCard = ({
       <div className={styles.topContainer}>
         <div className={styles.topLeftContainer}>
           <h3 className={styles.title}>{title}</h3>
-          <div className={styles.tagContainer}>
+          <motion.div
+            className={styles.tagContainer}
+            initial="hidden"
+            animate="visible"
+            variants={tagContainerVariant}
+          >
             {tags?.length > 0 &&
-              tags.map((tag) => <Tag key={tag} {...{ tag }} />)}
-          </div>
+              tags.map((tag) => (
+                <motion.div key={tag} variants={tagVariant}>
+                  <Tag {...{ tag }} />
+                </motion.div>
+              ))}
+          </motion.div>
           <div className={styles.descriptionContainer}>
             {description && <p className={styles.description}>{description}</p>}
           </div>
@@ -45,7 +68,7 @@ const ProjectCard = ({
       )}
       {internalUrl && (
         <div className={styles.buttonWrapper}>
-          <Link href={internalUrl} passHref>
+          <Link href={internalUrl} passHref scroll={false}>
             <a>
               <Button title="See more" variant="primary" />
             </a>

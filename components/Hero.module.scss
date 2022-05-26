@@ -1,0 +1,23 @@
+.hero {
+  justify-content: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.lottieContainer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.heroContent {
+  width: 80vw;
+  height: 50vh;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 7rem;
+  margin-top: 8rem;
+}

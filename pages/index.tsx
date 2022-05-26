@@ -5,6 +5,7 @@ import ProjectCard from "../components/ProjectCard";
 import MegaHero from "../components/MegaHero";
 import { homeHeroContent } from "../content/home.content";
 import Lottie from "react-lottie";
+import { motion } from "framer-motion";
 
 import styles from "../styles/Home.module.scss";
 
@@ -12,6 +13,7 @@ import norbanContent from "../content/norban.content";
 import brewtimeContent from "../content/brewtime.content";
 
 import purpleCloud from "../public/lotties/purple-cloud.json";
+import rockingPurpleCloud from "../public/lotties/rocking-purple-cloud.json";
 
 const purpleCloudOptions = {
   loop: true,
@@ -22,9 +24,18 @@ const purpleCloudOptions = {
   },
 };
 
+const rockingPurpleCloudOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: rockingPurpleCloud,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <motion.div className={styles.container}>
       <Head>
         <title>carlw.se - Fullstack engineer</title>
         <meta name="description" content="" />
@@ -56,38 +67,76 @@ const Home: NextPage = () => {
         </div>
 
         <section className={styles.subSection}>
-          <SectionHeader {...{ title: "work." }} />
-          <ProjectCard
-            {...{
-              title: norbanContent.organisationName,
-              tags: norbanContent.tags,
-              description: norbanContent.shortDescription,
-              thumbnailSrc: norbanContent.app.splashScreen,
-              websiteUrl: norbanContent.websiteUrl,
-              internalUrl: "/projects/norban",
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0, x: 400 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2 }}
+            viewport={{ once: true }}
+          >
+            <SectionHeader {...{ title: "work." }} />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <ProjectCard
+              {...{
+                title: norbanContent.organisationName,
+                tags: norbanContent.tags,
+                description: norbanContent.shortDescription,
+                thumbnailSrc: norbanContent.app.splashScreen,
+                websiteUrl: norbanContent.websiteUrl,
+                internalUrl: "/projects/norban",
+              }}
+            />
+          </motion.div>
         </section>
 
-        <div className={styles.sectionMargin} />
+        <motion.div
+          className={styles.bottomLottieContainer}
+          initial={{ opacity: 0, x: -400, y: 200 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 1.2 }}
+          viewport={{ once: true }}
+        >
+          <div className={styles.bottomLottiePositionerContainer}>
+            <Lottie {...{ options: rockingPurpleCloudOptions }} />
+          </div>
+        </motion.div>
 
         <section className={styles.subSection}>
-          <SectionHeader {...{ title: "side project." }} />
-          <ProjectCard
-            {...{
-              title: brewtimeContent.organisationName,
-              tags: brewtimeContent.tags,
-              description: brewtimeContent.shortDescription,
-              thumbnailSrc: brewtimeContent.app.splashScreen,
-              websiteUrl: brewtimeContent.websiteUrl,
-              internalUrl: "/projects/brewtime",
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0, x: 400 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2 }}
+            viewport={{ once: true }}
+          >
+            <SectionHeader {...{ title: "side project." }} />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <ProjectCard
+              {...{
+                title: brewtimeContent.organisationName,
+                tags: brewtimeContent.tags,
+                description: brewtimeContent.shortDescription,
+                thumbnailSrc: brewtimeContent.app.splashScreen,
+                websiteUrl: brewtimeContent.websiteUrl,
+                internalUrl: "/projects/brewtime",
+              }}
+            />
+          </motion.div>
         </section>
 
         <div className={styles.footerMargin} />
       </main>
-    </div>
+    </motion.div>
   );
 };
 

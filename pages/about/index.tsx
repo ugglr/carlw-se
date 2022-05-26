@@ -2,9 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Hero from "../../components/Hero";
 
-import styles from "../../styles/Blog.module.scss";
-
-const Blog: NextPage = () => {
+const About: NextPage = () => {
   return (
     <div>
       <Head>
@@ -14,10 +12,10 @@ const Blog: NextPage = () => {
       </Head>
 
       <main>
-        <Hero {...{ title: "blog." }} />
+        <Hero {...{ title: "about." }} />
       </main>
     </div>
   );
 };
 
-export default Blog;
+export default About;
