@@ -25,3 +25,25 @@
   font-size: 4rem;
   max-width: 50vw;
 }
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 590px) {
+  .hero {
+    height: 42vh;
+  }
+  .heroContent {
+    width: 95vw;
+  }
+  .heroTitle {
+    font-size: 4rem;
+  }
+  .smallTitle {
+    font-size: 2.5rem;
+    max-width: 95vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+}

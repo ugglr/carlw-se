@@ -13,3 +13,13 @@
 .postMargin {
   height: 7rem;
 }
+
+@media only screen and (max-width: 590px) {
+  .postsContainer {
+    min-width: 95vw;
+    max-width: 95vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+}

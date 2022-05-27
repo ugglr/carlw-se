@@ -30,7 +30,7 @@ const ProjectHero = ({
       <h1 className={styles.title}>{title}</h1>
       <p className={styles.description}>{description}</p>
       <a href={websiteUrl} target="_blank" rel="noreferrer">
-        <Button {...{ title: "Website", variant: "primary" }} />
+        <Button {...{ title: "Website", variant: "black" }} />
       </a>
       <div className={styles.badgeContainer}>
         {appstoreUrl && (

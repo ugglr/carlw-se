@@ -31,4 +31,10 @@
 }
 
 @media only screen and (max-width: 420px) {
+  .container {
+    max-width: 95vw;
+  }
+  .title {
+    font-size: 2rem;
+  }
 }
