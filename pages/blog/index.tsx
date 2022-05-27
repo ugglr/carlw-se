@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import useSWR, { Fetcher } from "swr";
+import useSWR from "swr";
 import BlogPostCard from "../../components/BlogPostCard";
 import Hero from "../../components/Hero";
 
@@ -21,7 +21,7 @@ export type BlogPostFragment = {
 };
 
 const Blog: NextPage = () => {
-  const { data, error } = useSWR<BlogPostFragment[]>(`${DEV_TO_URL}`, fetcher);
+  const { data } = useSWR<BlogPostFragment[]>(`${DEV_TO_URL}`, fetcher);
 
   return (
     <div>
