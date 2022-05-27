@@ -1,0 +1,15 @@
+.contentContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.postsContainer {
+  min-height: 50vh;
+  min-width: 80vw;
+  max-width: 80vw;
+}
+
+.postMargin {
+  height: 7rem;
+}

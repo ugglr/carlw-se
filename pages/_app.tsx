@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           exit={{ opacity: 0 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
           <Component {...pageProps} />
         </motion.div>

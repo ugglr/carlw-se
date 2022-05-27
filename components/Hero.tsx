@@ -12,15 +12,21 @@ const scrollingPurpleCloudOptions = {
   },
 };
 
-type HeroProps = { title: string };
+type HeroProps = { title: string; smallTitle?: boolean };
 
-const Hero = ({ title }: HeroProps) => (
+const Hero = ({ title, smallTitle }: HeroProps) => (
   <div className={styles.hero}>
     <div className={styles.lottieContainer}>
       <Lottie {...{ options: scrollingPurpleCloudOptions }} />
     </div>
     <div className={styles.heroContent}>
-      <h1 className={styles.heroTitle}>{title}</h1>
+      <h1
+        className={[styles.heroTitle, smallTitle && styles.smallTitle].join(
+          " "
+        )}
+      >
+        {title}
+      </h1>
     </div>
   </div>
 );

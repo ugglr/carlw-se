@@ -2,15 +2,13 @@ import styles from "./Button.module.scss";
 
 type ButtonProps = {
   title: string;
-  variant?: "primary" | "secondary" | "outlined";
+  variant?: "black" | "purple" | "black-outline";
   onClick?: () => any;
 };
 
 const Button = ({ title, onClick, variant }: ButtonProps) => (
   <button
-    className={[styles.button, variant === "primary" && styles.primary].join(
-      " "
-    )}
+    className={[styles.button, variant === "black" && styles.black].join(" ")}
     onClick={onClick}
   >
     <p>{title}</p>

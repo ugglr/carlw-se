@@ -87,7 +87,7 @@ const HomeHero = ({
         transition={{ duration: 1 }}
       >
         <a href={ctaButtonLink}>
-          <Button {...{ title: ctaButtonLabel, variant: "primary" }} />
+          <Button {...{ title: ctaButtonLabel, variant: "black" }} />
         </a>
       </motion.div>
       <motion.h1
