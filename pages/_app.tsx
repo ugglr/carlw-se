@@ -5,7 +5,7 @@ import type { AppProps } from "next/app";
 import Layout from "../components/layout/Layout";
 
 // Allows us to animate components when they are removed from the React tree
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Script from "next/script";
 
@@ -30,7 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Script>
 
       <Layout>
-        <Component {...pageProps} key={router.route} />
+        <AnimatePresence onExitComplete={() => window.scrollTo(0, 0)}>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </Layout>
     </>
   );

@@ -3,7 +3,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import useSWR from "swr";
 import BlogPostCard from "../../components/BlogPostCard";
-import Hero from "../../components/Hero";
+import Hero from "../../components/heroes/Hero";
 
 import styles from "../../styles/Blog.module.scss";
 

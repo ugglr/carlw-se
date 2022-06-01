@@ -1,9 +1,9 @@
 import Lottie from "react-lottie";
-import Button from "./Button";
+import Button from "../Button";
 import { motion, Variants } from "framer-motion";
 
 import styles from "./MegaHero.module.scss";
-import scrollingPurpleClouds from "../public/lotties/scrolling-purple-clouds.json";
+import scrollingPurpleClouds from "../../public/lotties/scrolling-purple-clouds.json";
 
 const scrollingPurpleCloudOptions = {
   loop: true,

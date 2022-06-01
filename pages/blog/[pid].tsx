@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import useSWR from "swr";
 import { BlogPostFragment } from ".";
 import Button from "../../components/Button";
-import Hero from "../../components/Hero";
+import Hero from "../../components/heroes/Hero";
 import Tag from "../../components/Tag";
 
 import styles from "./Post.module.scss";

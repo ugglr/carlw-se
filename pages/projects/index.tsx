@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Hero from "../../components/Hero";
+import Hero from "../../components/heroes/Hero";
 import ProjectCard from "../../components/ProjectCard";
 import brewtimeContent from "../../content/brewtime.content";
 import norbanContent from "../../content/norban.content";

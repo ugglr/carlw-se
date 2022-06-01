@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { SectionHeader } from "../../../components/layout";
-import ProjectHero from "../../../components/ProjectHero";
+import ProjectHero from "../../../components/heroes/ProjectHero";
 import norbanContent from "../../../content/norban.content";
 
 import styles from "../ProjectPage.module.scss";
@@ -29,7 +29,7 @@ const Norban: NextPage = () => {
 
         <div className={styles.heroMargin} />
 
-        <SectionHeader {...{ title: "Work duties" }} />
+        <SectionHeader {...{ title: "work duties." }} />
 
         <div className={styles.infoContainer}>
           <p>
@@ -38,7 +38,7 @@ const Norban: NextPage = () => {
             role needed to move forward. We have been shipping code to
             production weekly without stop for the last years.
           </p>
-          <h2>Milestones</h2>
+          <h2>milestones.</h2>
           <ul>
             <li>Grew tech team 2x</li>
             <li>Grew the amount of user onboardings 4x</li>
@@ -47,12 +47,13 @@ const Norban: NextPage = () => {
               collection points accross platforms.
             </li>
           </ul>
-          <h2>The stack</h2>
+          <h2>the stack.</h2>
           <ul>
             <li>Mobile App - React Native</li>
             <li>Website - React, SSR+CSR, Graphql</li>
             <li>Backend - Express.js, Apollo Server / GraphQL / Postgresql</li>
-            <li>Analytics service - Nestjs, MongoDB, Graphql</li>
+            <li>Analytics service - Nest.js, MongoDB / Mongoose, Graphql</li>
+            <li>Devops - Google cloud platform</li>
           </ul>
         </div>
 
