@@ -4,13 +4,17 @@ import type { AppProps } from "next/app";
 // Site wide applied layout
 import Layout from "../components/layout/Layout";
 
-// Allows us to animate components when they are removed from the React tree
-import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <>
       <Script
@@ -30,9 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Script>
 
       <Layout>
-        <AnimatePresence onExitComplete={() => window.scrollTo(0, 0)}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
+        <Component {...pageProps} key={router.route} />
       </Layout>
     </>
   );
