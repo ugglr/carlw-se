@@ -12,14 +12,6 @@ const Navbar = () => {
       </div>
       <div className={styles.linksContainer}>
         <div className={styles.link}>
-          <Link href="/about">
-            <a>about</a>
-          </Link>
-        </div>
-
-        <div className={styles.linkMargin} />
-
-        <div className={styles.link}>
           <Link href="/blog">
             <a>blog</a>
           </Link>

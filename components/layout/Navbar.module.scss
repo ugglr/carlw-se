@@ -32,3 +32,19 @@
 .linkMargin {
   width: 2rem;
 }
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 590px) {
+  .navbar {
+    width: 95vw;
+  }
+  .logo,
+  .link {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+}

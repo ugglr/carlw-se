@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { SectionHeader } from "../components/layout";
 import ProjectCard from "../components/ProjectCard";
-import MegaHero from "../components/MegaHero";
+import MegaHero from "../components/heroes/MegaHero";
 import { homeHeroContent } from "../content/home.content";
 import Lottie from "react-lottie";
 import { motion } from "framer-motion";
@@ -35,7 +35,7 @@ const rockingPurpleCloudOptions = {
 
 const Home: NextPage = () => {
   return (
-    <motion.div className={styles.container}>
+    <div className={styles.container}>
       <Head>
         <title>carlw.se - Fullstack engineer</title>
         <meta name="description" content="" />
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
 
         <div className={styles.footerMargin} />
       </main>
-    </motion.div>
+    </div>
   );
 };
 

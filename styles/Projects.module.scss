@@ -1,7 +1,15 @@
 .topMargin {
   height: 10rem;
 }
-
+.contentContainer {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.projectsContainer {
+  min-width: 80vw;
+}
 .projectContainer {
   margin-bottom: 5rem;
 }

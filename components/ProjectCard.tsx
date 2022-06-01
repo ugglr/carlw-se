@@ -70,7 +70,7 @@ const ProjectCard = ({
         <div className={styles.buttonWrapper}>
           <Link href={internalUrl} passHref scroll={false}>
             <a>
-              <Button title="See more" variant="primary" />
+              <Button title="See more" variant="black" />
             </a>
           </Link>
         </div>
