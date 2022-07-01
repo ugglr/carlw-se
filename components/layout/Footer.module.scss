@@ -1,13 +1,68 @@
+@import "../../styles/colors";
+
 .footer {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.topLevel {
   align-items: center;
   display: flex;
   background-color: black;
   color: white;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  padding: 0 2rem;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  justify-content: center;
+  padding: 4rem 4rem;
   width: 80vw;
-  justify-content: space-between;
+}
+
+.navLinks {
+  font-size: 2.5vw;
+  margin-right: 6rem;
+  text-decoration: underline;
+
+  &:hover {
+    color: $purple;
+  }
+}
+
+.subLevel {
+  align-items: center;
+  background-color: black;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  justify-content: center;
+  width: 100vw;
+}
+
+.ctaText {
+  font-size: 3vw;
+  margin: 0;
+  text-align: center;
+}
+
+.ctaButtonContainer {
+  margin-top: 2rem;
+  width: 248px;
+}
+.textMargin {
+  height: 4rem;
+}
+
+.megaText {
+  font-size: 10vw;
+  margin: 0;
+}
+
+.linkText {
+  text-decoration: underline;
+  color: $purple;
 }
 
 @media only screen and (max-width: 780px) {

@@ -8,7 +8,11 @@ type ButtonProps = {
 
 const Button = ({ title, onClick, variant }: ButtonProps) => (
   <button
-    className={[styles.button, variant === "black" && styles.black].join(" ")}
+    className={[
+      styles.button,
+      variant === "black" && styles.black,
+      variant === "purple" && styles.purple,
+    ].join(" ")}
     onClick={onClick}
   >
     <p>{title}</p>
