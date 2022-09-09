@@ -1,5 +1,6 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
+import * as gtag from "../lib/gtag";
 
 // Site wide applied layout
 import Layout from "../components/layout/Layout";
@@ -15,23 +16,39 @@ function MyApp({ Component, pageProps }: AppProps) {
     window.scrollTo(0, 0);
   });
 
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("hashChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("hashChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-3L776MBWQP`}
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
-
-      <Script id="google-analytics" strategy="lazyOnload">
-        {`
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-3L776MBWQP', {
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
-                `}
-      </Script>
+          `,
+        }}
+      />
 
       <Layout>
         <Component {...pageProps} key={router.route} />
@@ -41,13 +58,3 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default MyApp;
-
-/*
-
-            key={router.route}
-            exit={{ opacity: 0 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-
-            */
