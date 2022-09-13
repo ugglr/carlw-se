@@ -31,7 +31,7 @@ const Navbar = () => {
 
           <div className={styles.link}>
             <Link href="/projects">
-              <a>current projects.</a>
+              <a>projects.</a>
             </Link>
           </div>
         </div>

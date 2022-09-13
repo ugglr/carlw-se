@@ -18,9 +18,9 @@ const titleAnimationVariant: Variants = {
   hidden: { x: -200, opacity: 0 },
 };
 
-type HeroProps = { title: string; smallTitle?: boolean };
+type HeroProps = { title: string; subtitle?: string; smallTitle?: boolean };
 
-const Hero = ({ title, smallTitle }: HeroProps) => (
+const Hero = ({ title, subtitle, smallTitle }: HeroProps) => (
   <motion.div initial="hidden" animate="visible" className={styles.hero}>
     <div className={styles.lottieContainer}>
       <Lottie {...{ options: scrollingPurpleCloudOptions }} />
@@ -34,6 +34,9 @@ const Hero = ({ title, smallTitle }: HeroProps) => (
       >
         {title}
       </motion.h1>
+      {subtitle && (
+        <motion.h3 variants={titleAnimationVariant}>{subtitle}</motion.h3>
+      )}
     </div>
   </motion.div>
 );

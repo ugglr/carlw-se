@@ -24,7 +24,7 @@
   font-weight: bold;
 
   &:hover {
-    text-decoration: underline 10px;
+    color: $yellow;
   }
 }
 .rightContainer {
@@ -32,8 +32,6 @@
   display: flex;
 }
 .linksContainer {
-  //border: 2px solid black;
-  //border-radius: 20px;
   padding: 1rem;
   display: flex;
 }
@@ -41,10 +39,10 @@
   width: 2rem;
 }
 .socialIcon {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 
   &:hover {
-    color: $purple;
+    color: $yellow;
   }
 }
 

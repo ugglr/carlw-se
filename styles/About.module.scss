@@ -1,0 +1,22 @@
+.contentContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: auto;
+  width: 80vw;
+}
+
+.summaryContainer {
+  background-color: aqua;
+  position: relative;
+  margin: auto;
+  width: 80vw;
+}
+
+.sectionTitle {
+  font-size: 5vw;
+}
+
+.footerMargin {
+  height: 10vh;
+}
