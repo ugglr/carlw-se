@@ -18,13 +18,7 @@ const ExperienceCard: React.FC<Props> = ({
 }) => (
   <div className={styles.container}>
     <div className={styles.logoContainer}>
-      <Image
-        className={styles.logoImg}
-        alt={`${company} logo`}
-        src={logo}
-        width={64}
-        height={64}
-      />
+      <Image className={styles.logoImg} alt={`${company} logo`} src={logo} />
     </div>
     <div key={company} className={styles.card}>
       <div className={styles.topContainer}>

@@ -2,19 +2,15 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  top: -15vh;
   margin: auto;
   width: 80vw;
-}
-
-.summaryContainer {
-  background-color: aqua;
-  position: relative;
-  margin: auto;
-  width: 80vw;
+  z-index: 2;
 }
 
 .sectionTitle {
-  font-size: 5vw;
+  font-size: 4vw;
+  margin: 3rem 0;
 }
 
 .footerMargin {
