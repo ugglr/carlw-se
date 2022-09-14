@@ -1,0 +1,44 @@
+@import "../../../styles/colors";
+
+.card {
+  align-items: center;
+  display: flex;
+  margin-bottom: 13vh;
+}
+.logoContainer {
+  height: 12vw;
+  margin-right: 2.5vw;
+  width: 12vw;
+}
+.textContainer {
+  flex: 1;
+}
+.title {
+  font-size: 4vw;
+  margin: 0;
+}
+.subtitle {
+  font-size: 2vw;
+  margin: 0;
+}
+
+.bottomContainer {
+  align-items: center;
+  background-color: $purple;
+  color: $offWhite;
+  border-radius: 20px;
+  display: flex;
+  padding: 1rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+  width: 85%;
+}
+.label {
+  font-size: 1.5vw;
+  margin: 0;
+}
+.dateText {
+  font-size: 1.2vw;
+  margin: 0;
+  margin-left: 2rem;
+}

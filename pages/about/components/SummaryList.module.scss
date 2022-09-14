@@ -1,0 +1,12 @@
+@import "../../../styles/colors";
+
+.listItem {
+  font-size: 2rem;
+}
+.linkText {
+  color: $purple;
+
+  &:hover {
+    color: $yellow;
+  }
+}
