@@ -27,17 +27,6 @@ const SummaryList = () => (
         DEV.to/ugglr
       </a>
     </li>
-    <li className={styles.listItem}>
-      I take photos 👉{" "}
-      <a
-        className={styles.linkText}
-        href="https://www.instagram.com/hangzhouist/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        instagram.com/hangzhouist
-      </a>
-    </li>
   </ul>
 );
 

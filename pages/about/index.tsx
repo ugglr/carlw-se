@@ -15,7 +15,7 @@ import zjuLogo from "../../public/images/logos/zju.png";
 
 import styles from "../../styles/About.module.scss";
 import Button from "../../components/Button";
-import Socials from "./components/Socials";
+import SocialRow from "../../components/SocialRow";
 
 const experiences = [
   {
@@ -84,7 +84,7 @@ const About: NextPage = () => {
         <div className={styles.contentContainer}>
           <SummaryList />
 
-          <Socials />
+          <SocialRow />
 
           <h2 className={styles.sectionTitle}>experience.</h2>
           {experiences.map(({ company, from, to, position, logo }) => (

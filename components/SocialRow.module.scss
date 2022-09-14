@@ -1,0 +1,25 @@
+@import "../styles/colors";
+
+.row {
+  display: flex;
+  margin: 2.5rem 0;
+}
+
+.icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 4vw;
+  border: 3px solid transparent;
+  border-radius: 20px;
+
+  &:hover {
+    background-color: $yellow;
+    border-color: $offBlack;
+  }
+}
+
+.iconMargin {
+  width: 7vw;
+}

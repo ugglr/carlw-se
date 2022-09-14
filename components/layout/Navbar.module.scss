@@ -46,6 +46,28 @@
   }
 }
 
+.emailCta {
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: $offWhite;
+  display: flex;
+  justify-content: center;
+  background-color: $purple;
+  height: 3.2rem;
+  width: 3.2rem;
+
+  &:hover {
+    background-color: $yellow;
+    border-color: $offBlack;
+    color: $offBlack;
+  }
+}
+
+.emailIcon {
+  font-size: 2rem;
+}
+
 @media only screen and (max-width: 960px) {
 }
 

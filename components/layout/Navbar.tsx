@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { SiGithub, SiTwitter } from "react-icons/si";
+import { FiMail } from "react-icons/fi";
 
 import styles from "./Navbar.module.scss";
+import { githubUrl, myEmail, twitterUrl } from "../../content/links.content";
 
 const Navbar = () => {
   return (
@@ -38,27 +40,19 @@ const Navbar = () => {
 
         <div className={styles.linkMargin} />
 
-        <a href="https://github.com/ugglr" target="_blank" rel="noreferrer">
+        <a href={githubUrl} target="_blank" rel="noreferrer">
           <SiGithub className={styles.socialIcon} />
         </a>
 
         <div className={styles.linkMargin} />
-        <a
-          href="https://www.linkedin.com/in/igelstrom/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={twitterUrl} target="_blank" rel="noreferrer">
           <SiTwitter className={styles.socialIcon} />
         </a>
 
         <div className={styles.linkMargin} />
 
-        <a
-          href="https://www.linkedin.com/in/igelstrom/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SiLinkedin className={styles.socialIcon} />
+        <a className={styles.emailCta} href={`mailto:${myEmail}`}>
+          <FiMail className={styles.emailIcon} />
         </a>
       </div>
     </div>
