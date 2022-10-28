@@ -27,7 +27,7 @@ const Post = () => {
     <>
       <Head>
         <title>{`carlw.se - Fullstack engineer | ${
-          data?.title ?? "Blog post"
+          data?.title ?? "blog post"
         }`}</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
