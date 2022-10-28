@@ -14,7 +14,6 @@ import lthLogo from "../../public/images/logos/lth.png";
 import zjuLogo from "../../public/images/logos/zju.png";
 
 import styles from "../../styles/About.module.scss";
-import Button from "../../components/Button";
 import SocialRow from "../../components/SocialRow";
 
 const experiences = [
@@ -69,7 +68,7 @@ const About: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>carlw.se - Fullstack engineer</title>
+        <title>carlw.se - Fullstack engineer | about</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
