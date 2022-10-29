@@ -10,7 +10,7 @@ const Norban: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>carlw.se - Fullstack engineer</title>
+        <title>carlw.se - Fullstack engineer | norban</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
