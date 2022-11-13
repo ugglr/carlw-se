@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import Link from "next/link";
 import { ReactElement } from "react";
 import Button from "../Button";
@@ -14,9 +15,14 @@ function Footer(): ReactElement {
         <Link href="/projects">
           <a className={styles.navLinks}>current projects.</a>
         </Link>
-        <Link href="/blog">
-          <a className={styles.navLinks}>blog.</a>
-        </Link>
+        <a
+          className={styles.navLinks}
+          href="https://carlw.hashnode.dev/"
+          target="_blank"
+          rel="noopener"
+        >
+          blog.
+        </a>
       </div>
       <div className={styles.subLevel}>
         <div className={styles.textMargin} />
