@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import Link from "next/link";
 import { SiGithub, SiTwitter } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
@@ -24,9 +25,13 @@ const Navbar = () => {
           <div className={styles.linkMargin} />
 
           <div className={styles.link}>
-            <Link href="/blog">
-              <a>blog.</a>
-            </Link>
+            <a
+              href="https://carlw.hashnode.dev/"
+              target="_blank"
+              rel="noopener"
+            >
+              blog.
+            </a>
           </div>
 
           <div className={styles.linkMargin} />
