@@ -17,7 +17,7 @@ const Projects: NextPage = () => {
       </Head>
 
       <main>
-        <Hero {...{ title: "current projects." }} />
+        <Hero {...{ title: "recent projects." }} />
 
         <div className={styles.contentContainer}>
           <div className={styles.projectsContainer}>
