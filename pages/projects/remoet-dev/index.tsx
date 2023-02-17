@@ -35,6 +35,13 @@ const Remoet: NextPage = () => {
             for jobs and I think remote work will play a big part in the future
             of work.
           </p>
+
+          <h2>the stack.</h2>
+          <ul>
+            <li>Website - Next.js, NextAuth.js, Apollo Graphql</li>
+            <li>Backend - Nest.js, MongoDB, Apollo GraphQL</li>
+            <li>Devops - Heroku, Netlify, Privateemail</li>
+          </ul>
         </div>
 
         <div className={styles.footerMargin} />
