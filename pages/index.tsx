@@ -113,7 +113,7 @@ const Home: NextPage = () => {
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
           >
-            <SectionHeader {...{ title: "side project." }} />
+            <SectionHeader {...{ title: "side projects." }} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -300 }}

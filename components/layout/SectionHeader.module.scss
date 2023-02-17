@@ -3,19 +3,13 @@
 }
 
 .title {
-  font-size: 10rem;
+  font-size: 6.5rem;
   margin: 1rem 0rem 3rem 0;
 }
 
 @media only screen and (max-width: 780px) {
   .title {
-    font-size: 6rem;
-  }
-}
-
-@media only screen and (max-width: 590px) {
-  .title {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
 }
 
