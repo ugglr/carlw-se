@@ -14,6 +14,7 @@ import brewtimeContent from "../content/brewtime.content";
 
 import purpleCloud from "../public/lotties/purple-cloud.json";
 import rockingPurpleCloud from "../public/lotties/rocking-purple-cloud.json";
+import remoetContent from "../content/remoet.content";
 
 const purpleCloudOptions = {
   loop: true,
@@ -114,6 +115,23 @@ const Home: NextPage = () => {
             viewport={{ once: true }}
           >
             <SectionHeader {...{ title: "side projects." }} />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <ProjectCard
+              {...{
+                title: remoetContent.organisationName,
+                tags: remoetContent.tags,
+                description: remoetContent.shortDescription,
+                thumbnailSrc: remoetContent.app.landingScreen,
+                websiteUrl: remoetContent.websiteUrl,
+                internalUrl: "/projects/remoet-dev",
+              }}
+            />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -300 }}
