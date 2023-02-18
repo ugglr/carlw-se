@@ -12,6 +12,12 @@ const SummaryList = () => (
     </li>
     <li className={styles.listItem}>
       I code even more 👉{" "}
+      <Link href="/projects/remoet-dev">
+        <a className={styles.linkText}>remoet.dev</a>
+      </Link>
+    </li>
+    <li className={styles.listItem}>
+      I still code some here 👉{" "}
       <Link href="/projects/brewtime">
         <a className={styles.linkText}>Brewtime</a>
       </Link>
@@ -24,7 +30,16 @@ const SummaryList = () => (
         target="_blank"
         rel="noreferrer"
       >
-        DEV.to/ugglr
+        here
+      </a>{" "}
+      OR{" "}
+      <a
+        className={styles.linkText}
+        href="https://carlw.hashnode.dev"
+        target="_blank"
+        rel="noreferrer"
+      >
+        here
       </a>
     </li>
   </ul>
