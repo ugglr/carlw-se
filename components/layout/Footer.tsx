@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { ReactElement } from "react";
 import Button from "../Button";
+import { githubUrl, myEmail } from "../../content/links.content";
 
 import styles from "./Footer.module.scss";
 
@@ -35,7 +36,7 @@ function Footer(): ReactElement {
         <h1 className={styles.ctaText}>Send me a message to discuss.</h1>
         <h1 className={styles.ctaText}>👇</h1>
         <div className={styles.ctaButtonContainer}>
-          <a href="mailto:carl.igelstrom@gmail.se">
+          <a href={`mailto:${myEmail}`}>
             <Button variant="purple" title="Email me." />
           </a>
         </div>
@@ -64,7 +65,7 @@ function Footer(): ReactElement {
         <p>
           Made with ☕️ and Typescript. copyright © 2022–2026 Igelström, Carl{" "}
           (
-          <a className={styles.linkText} href="https://github.com/ugglr">
+          <a className={styles.linkText} href={githubUrl}>
             ugglr
           </a>
           )
