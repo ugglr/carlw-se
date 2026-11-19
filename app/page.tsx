@@ -1,5 +1,5 @@
 import RemoetBoard from "./RemoetBoard";
-import { getRemoetSnapshot, formatCount } from "./remoet";
+import { fetchRemoetStats, formatCount } from "./remoet";
 import {
   email,
   jobs,
@@ -15,7 +15,7 @@ const WORDMARK = "IGELSTRÖM".split("");
 const HEIGHTS = [100, 74, 90, 64, 96, 80, 70, 92, 84];
 
 export default async function Home() {
-  const snapshot = await getRemoetSnapshot();
+  const snapshot = await fetchRemoetStats();
   const year = new Date().getFullYear();
 
   return (
@@ -39,7 +39,7 @@ export default async function Home() {
         <section className="hero" aria-labelledby="title">
           <div className="tile name-tile">
             <h1 id="title" className="display">
-              Igelström, Carl
+              {legalName}
             </h1>
             <p className="small name-note">
               Igel is Swedish for hedgehog. Painting by Hans Hoffmann, 1584.
@@ -55,7 +55,7 @@ export default async function Home() {
           </figure>
           <figure className="tile photo">
             <img
-              src="/images/remoet-home.jpg"
+              src={shots[0].src}
               width={1440}
               height={900}
               alt={shots[0].alt}

@@ -4,32 +4,26 @@ import { useEffect, useState } from "react";
 import { links } from "./content";
 import {
   ago,
+  DAY,
+  fetchRemoetStats,
   formatCount,
-  REMOET_STATS_URL,
   type RemoetStats,
 } from "./remoet";
-
-const DAY = 24 * 60 * 60 * 1000;
 
 export default function RemoetBoard({ snapshot }: { snapshot: RemoetStats }) {
   const [stats, setStats] = useState(snapshot);
   // Start from the snapshot's own clock so the server and browser render the same text.
   const [now, setNow] = useState(() => Date.parse(snapshot.computedAt));
-  const [open, setOpen] = useState(3);
+  const [open, setOpen] = useState(0);
 
   useEffect(() => {
     setNow(Date.now());
-    const controller = new AbortController();
-    fetch(REMOET_STATS_URL, { signal: controller.signal })
-      .then((res) => (res.ok ? res.json() : null))
-      .then((fresh: RemoetStats | null) => {
-        if (fresh?.recentlyRefreshed?.length) {
-          setStats(fresh);
-          setNow(Date.now());
-        }
-      })
-      .catch(() => {});
-    return () => controller.abort();
+    fetchRemoetStats({ cache: "no-store" }).then((fresh) => {
+      if (fresh) {
+        setStats(fresh);
+        setNow(Date.now());
+      }
+    });
   }, []);
 
   const rows = stats.recentlyRefreshed.slice(0, 9);
