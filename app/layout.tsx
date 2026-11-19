@@ -27,7 +27,7 @@ export const viewport: Viewport = { themeColor: "#0d060b" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // The inline script and Motion.tsx change <html> attributes before hydration on purpose.
+    // The inline script adds `js` to <html> before hydration, so the class differs on purpose.
     <html lang="en" className={jost.variable} suppressHydrationWarning>
       <head>
         <script
