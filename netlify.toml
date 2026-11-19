@@ -1,2 +1,19 @@
-[[plugins]]
-package = "@netlify/plugin-nextjs"
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Pages from the old site. They point at the one page now.
+[[redirects]]
+  from = "/about"
+  to = "/#about"
+  status = 301
+
+[[redirects]]
+  from = "/projects/*"
+  to = "/#products"
+  status = 301
+
+[[redirects]]
+  from = "/projects"
+  to = "/#products"
+  status = 301

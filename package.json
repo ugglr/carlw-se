@@ -1,32 +1,24 @@
 {
   "name": "carlw-se",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "npx serve out"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "dependencies": {
-    "framer-motion": "^9.0.4",
-    "next": "12.1.4",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-icons": "^4.7.1",
-    "react-lottie": "^1.2.3",
-    "sass": "^1.58.2",
-    "swr": "^2.0.3"
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.30.4",
-    "@types/gtag.js": "^0.0.12",
-    "@types/node": "17.0.23",
-    "@types/react": "18.0.1",
-    "@types/react-dom": "18.0.0",
-    "@types/react-lottie": "^1.2.6",
-    "eslint": "8.13.0",
-    "eslint-config-next": "12.1.4",
-    "typescript": "^4.9.5"
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
   }
 }
