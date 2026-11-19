@@ -5,15 +5,15 @@
 # Pages from the old site. They point at the one page now.
 [[redirects]]
   from = "/about"
-  to = "/#about"
+  to = "/"
   status = 301
 
 [[redirects]]
   from = "/projects/*"
-  to = "/#products"
+  to = "/"
   status = 301
 
 [[redirects]]
   from = "/projects"
-  to = "/#products"
+  to = "/"
   status = 301
