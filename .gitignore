@@ -33,3 +33,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# design tooling output
+/.taste-skill/
+/.playwright-mcp/
