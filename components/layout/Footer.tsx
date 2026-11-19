@@ -62,10 +62,12 @@ function Footer(): ReactElement {
         </p>
         <div className={styles.textMargin} />
         <p>
-          Made with ☕️ and Typescript. copyright © 2022{" "}
-          <a className={styles.linkText} href="https://www.github/ugglr">
+          Made with ☕️ and Typescript. copyright © 2022–2026 Igelström, Carl{" "}
+          (
+          <a className={styles.linkText} href="https://github.com/ugglr">
             ugglr
           </a>
+          )
         </p>
       </div>
     </footer>
