@@ -1,8 +1,11 @@
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 import { motion, Variants } from "framer-motion";
 
 import styles from "./Hero.module.scss";
 import scrollingPurpleClouds from "../../public/lotties/scrolling-purple-clouds.json";
+
+// lottie-web touches `document` on load, so it must only run in the browser.
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 const scrollingPurpleCloudOptions = {
   loop: true,

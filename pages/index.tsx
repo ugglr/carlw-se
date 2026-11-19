@@ -4,7 +4,7 @@ import { SectionHeader } from "../components/layout";
 import ProjectCard from "../components/ProjectCard";
 import MegaHero from "../components/heroes/MegaHero";
 import { homeHeroContent } from "../content/home.content";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
 import styles from "../styles/Home.module.scss";
@@ -15,6 +15,9 @@ import brewtimeContent from "../content/brewtime.content";
 import purpleCloud from "../public/lotties/purple-cloud.json";
 import rockingPurpleCloud from "../public/lotties/rocking-purple-cloud.json";
 import remoetContent from "../content/remoet.content";
+
+// lottie-web touches `document` on load, so it must only run in the browser.
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 const purpleCloudOptions = {
   loop: true,
